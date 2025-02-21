@@ -38,7 +38,7 @@ import { useAccount } from 'wagmi';
 
 import { Providers } from './providers'; 
 
-const TICKET_CONTRACT_ADDRESS = '0x747172f0dEcB86d9C82113381d3bBFf59d34EEc0';
+const TICKET_CONTRACT_ADDRESS = '0xeBe231D1bE1944838BFf46F6F23ED337e6c3cDDc';
 
 export default function App() {
   const { address } = useAccount();
@@ -56,7 +56,7 @@ export default function App() {
     description: '',
   });
   const [checkoutEvent, setCheckoutEvent] = useState<Event | null>(null);
-0x747172f0dEcB86d9C82113381d3bBFf59d34EEc0
+// 0x747172f0dEcB86d9C82113381d3bBFf59d34EEc0
   const handleCreateEvent = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Creating event:', newEvent);
