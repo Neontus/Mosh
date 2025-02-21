@@ -38,6 +38,8 @@ import { useAccount } from 'wagmi';
 
 import { Providers } from './providers'; 
 
+// import NFTTransferComponent from './components/NFTTransferComponent';
+
 const TICKET_CONTRACT_ADDRESS = '0x747172f0dEcB86d9C82113381d3bBFf59d34EEc0';
 
 export default function App() {
@@ -78,6 +80,9 @@ export default function App() {
   // 0x5e2d...059e
 
   // 0xf5bdCAe863D762e38455aCB71f2bFEfdc3547822
+
+  const [sender, setSender] = useState(TICKET_CONTRACT_ADDRESS);
+  const [recipient, setRecipient] = useState("0xf5bdCAe863D762e38455aCB71f2bFEfdc3547822");
 
   return (
     <Providers>
@@ -176,12 +181,13 @@ export default function App() {
                         <h3 className="font-bold">{event.title}</h3>
                         <p className="text-sm">{event.description}</p>
                       </div>
-                      <button
+                      {/* <button
                         onClick={() => handlePurchaseTicket(event)}
                         className="px-3 py-1 bg-blue-600 text-white rounded"
                       >
                         Purchase Ticket
-                      </button>
+                      </button> */}
+                            {/* <NFTTransferComponent sender={sender} recipient={recipient} /> */}
                     </li>
                   ))}
                 </ul>
